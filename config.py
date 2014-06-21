@@ -11,7 +11,7 @@ if os.environ.get("HEROKU") is None:
       from apikey import _API_KEY
       API_KEY = _API_KEY
       print ' This app is on a local server'
-else:c
+else:
       app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
       # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","postgresql://pguser:password/dbname")
       API_KEY = str(os.environ.get("theapikey"))

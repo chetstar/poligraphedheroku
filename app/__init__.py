@@ -12,6 +12,7 @@ from flask.ext.mail import Mail
 
 # create the application
 # if os.environ.get("HEROKU") is None:
+# if os.environ.get("HEROKU") is None: 
 #      pass
 # else:
 #       print 'This app is on heroku'

@@ -18,3 +18,5 @@ src/app.db
 src/migrations
 migrations/
 build/
+**/flask
+**/tmp

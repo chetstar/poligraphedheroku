@@ -14,11 +14,7 @@ from flask.ext.mail import Mail
 
 app = Flask(__name__)
 app.config.from_object('config')
-if os.environ.get("HEROKU") is None:
-     pass
-else:
-      print 'This app is on heroku'
-      app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 

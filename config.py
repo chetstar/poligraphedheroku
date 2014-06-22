@@ -17,6 +17,7 @@ else:
       # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","postgresql://pguser:password/dbname")
       API_KEY = str(os.environ.get("theapikey"))
       SQLALCHEMY_DATABASE_URI = os.environ["DATABASE_URL"]
+
 class _DefaultSettings(object):
     USERNAME = 'world'
     SECRET_KEY = 'development key'

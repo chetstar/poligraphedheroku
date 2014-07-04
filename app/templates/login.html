@@ -22,7 +22,7 @@ function set_openid(openid, pr)
     <h1>Sign In</h1>
 </div>
     {{ wtf.quick_form(form, role="login") }}
-    <br>
+    <br>   <small class="text-muted">Choose an existing account below to login>
     |{% for pr in providers %}
     <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');">{{pr.name}}</a> |
     {% endfor %}

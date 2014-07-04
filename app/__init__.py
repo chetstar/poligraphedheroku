@@ -14,7 +14,10 @@ from flask.ext.mail import Mail
 
 app = Flask(__name__)
 app.config.from_object('config')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+if os.environ.get("HEROKU") is None:
+      print ' This app is on a local server'
+else:
+	app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 

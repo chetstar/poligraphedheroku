@@ -11,18 +11,10 @@ from config import basedir
 from flask.ext.mail import Mail
 
 # create the application
-# if os.environ.get("HEROKU") is None:
-# if os.environ.get("HEROKU") is None: 
-#      pass
-# else:
-#       print 'This app is on heroku'
-#       app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+
 app = Flask(__name__)
 app.config.from_object('config')
-if os.environ.get("HEROKU") is None:
-	print 'local in init'
-else:
-	app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 

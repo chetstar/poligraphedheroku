@@ -20,13 +20,14 @@ function set_openid(openid, pr)
 <div class="col-md-6 col-md-offset-3">
 <div class="page-header">
     <h1>Sign In</h1>
-</div>
-    {{ wtf.quick_form(form, role="login") }}
-    <br>   <small class="text-muted">Login with an existing account below <br>
+     <br>   <small class="text-muted">Login with an existing account <br>
     |{% for pr in providers %}
     <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');">{{pr.name}}</a> |
-    {% endfor %}
-</div>
+    {% endfor %}<br><br>
+
+
+    {{ wtf.quick_form(form, role="login") }}
+   </div></div>
 </row>
 
 {% endblock %}

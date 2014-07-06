@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% set active_page = "about" %}
+
+{% block head %}
+{{ super() }}
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+    {% endblock %}
+
 {% block page_content %}
   <div class="jumbotron">
     <div class="container">
@@ -12,7 +19,7 @@
         <div class="row">
           
                         
-                        <div class="col-sm-12" id="featured">   
+                        <div class="col-sm-10" >   
                           <div class="page-header text-muted">
                           Our Team
                           </div> 
@@ -20,7 +27,7 @@
                         
               
                         <div class="row">    
-                          <div class="col-sm-10">
+                          <div class="col-sm-9">
                             <h3>Jordan Dietch</h3>
 
                             <h4><a href="https://github.com/jordandietch" <span class="label label-default">Poli-Founder</span></h4><h4></a>
@@ -30,24 +37,33 @@
                           <div class="col-sm-2">
                             <a href="#" class="pull-right"><img src="http://photos2.meetupstatic.com/photos/member/b/6/e/6/highres_178786822.jpeg" class="img-circle"  height="160" width="160"></a>
                           </div> 
-                        </div>
+          
                         
-                        <div class="col-sm-12" id="stories">  
+                        <div class="col-sm-10" >  
                           <div class="page-header text-muted divider">
 
-                          </div>
-                        </div>
+                        
+                        </div></div></div>
                          
                         <div class="row">    
-                          <div class="col-sm-10">
+                          <div class="col-sm-9">
                             <h3>Chet Meinzer</h3>
-                            <h4><a href="http://www.chetmeinzer.com" <span class="label label-default">ChetMeinzer.com</span></h4><h4></a>
-                            <small class="text-muted"><a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1438143" class="text-muted">Data Scientist • Systems Analyst </a></small>
+                 <h4><a href="http://www.chetmeinzer.com" <span class="label label-default">ChetMeinzer.com</span></h4><h4></a>
                             </h4>
-                          </div>
+                            <small  class="text-muted">Data Scientist • Systems Analyst </small>
+                                      </div>
                           <div class="col-sm-2">
-                            <a href="http://www.chetmeinzer.com" class="pull-right"><img src="http://www.dyja.com/sites/default/files/Chet_Meinzer.jpg" class="img-circle" height="176" width="137"></a>
+                <a href="http://www.chetmeinzer.com" class="pull-right"><img src="http://www.dyja.com/sites/default/files/Chet_Meinzer.jpg" class="img-circle" height="176" width="137"></a>
+ </div>
+                          <div class="col-sm-11">
+                   <p>    <a href="https://github.com/chetstar"><i class="fa fa-github-alt fa-2x color-github pull-right"></i></a>
+                        <a href="http://stackoverflow.com/users/2026611/chet-meinzer"><i class="fa fa-stack-overflow fa-2x color-stackoverflow pull-right"></i></a>
+                        <a href="https://www.linkedin.com/profile/view?id=124734980&trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin-square fa-2x color-linkedin pull-right"></i></a>
+                        <a href="https://www.flickr.com/photos/57005820@N00/"><i class="fa fa-flickr fa-2x color-flickr pull-right"></i></a>
+</p></div>
                           </div> 
+          
+     
                         </div>                        
                         <div class="row divider">    
                            <div class="col-sm-12"><hr></div>

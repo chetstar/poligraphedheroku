@@ -4,6 +4,11 @@
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/graph.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/datepicker.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/datepicker3.css') }}">
+<!--  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+       <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>-->
+
 {% endblock %}
 
 {% block sidebar %}
@@ -66,12 +71,12 @@
     <input name='keyword_2' class="form-control" id="keyword_2" placeholder="Keyword 2">
   </div>
   <div class="form-group">
-    <label class="sr-only" for="date_low">Start Date</label>
-    <input type="date" name='date_low' class="form-control" id="date_low" placeholder="Start Date">
+    <label class="sr-only" for="date_low" >Start Date</label>
+    <input data-provide="datepicker" type="date" name='date_low' class="form-control" id="date_low" data-date-format="yyyy-mm-dd">
   </div>
   <div class="form-group">
     <label class="sr-only" for="date_high">End Date</label>
-    <input type="date" name='date_high' class="form-control" id="date_high" placeholder="End Date">
+    <input data-provide="datepicker" type="date" name='date_high' class="form-control" id="date_high" data-date-format="yyyy-mm-dd">
   </div>
   <div class="form-group">
     <select name='granularity' id="granularity"  class="form-control">
@@ -160,4 +165,7 @@
 <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/testajax.js') }}"></script>
 <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/capitolrecords.js') }}"></script>
 
+         <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+   <!--- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+-->
 {% endblock %}

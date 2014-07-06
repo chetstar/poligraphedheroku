@@ -1,4 +1,8 @@
-from apikey import _API_KEY
+if os.environ.get("HEROKU") is None:
+      from apikey import _API_KEY
+else:
+      _API_KEY = str(os.environ.get("theapikey"))
+
 import requests
 import json
 from date_convert import javascript_timestamp, convert_jsts

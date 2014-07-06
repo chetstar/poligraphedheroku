@@ -1,3 +1,4 @@
+import os
 if os.environ.get("HEROKU") is None:
       from apikey import _API_KEY
 else:

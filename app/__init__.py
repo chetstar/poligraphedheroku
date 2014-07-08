@@ -17,7 +17,7 @@ app.config.from_object('config')
 if os.environ.get("HEROKU") is None:
       print ' This app is on a local server'
 else:
-	app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+      app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 
